@@ -63,7 +63,7 @@ At least, there are some bonus:
 
 ### Gameplay
 
-Once in the game, you will recognize your character by you nickname above his head. Then the game start after the countdown.
+Once in the game, you will recognize your character ![Character](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/player.bmp) by you nickname above his head. Then the game start after the countdown.
 
 Here are game inputs:
 - *```Arrows```* keys to move
