@@ -1,0 +1,239 @@
+NOTE : Chaque commande doit se terminer par '\n'.
+
+##################### Log in and out ###########################
+
+C -> S
+
+    LOG USERNAME
+
+
+Note : L'odre n'est pas important, le serveur peut envoyer CND avant même que le client ne se log, donc toujours traiter la commande CND peut importe si vous vous êtes log ou pas
+
+S -> C
+
+    CND NUM
+
+    ERR LOG
+
+    ERR FUL
+
+
+Envoie une liste à un client qui se connecte contenant le nombre de membres déjà connectés ainsi que leur numéro et leur pseudo correspondant.
+Note : La liste ne contient pas le client qui vient de se connecter (Cf note ARV)
+S -> C
+
+    LST NUMBER NUM USERNAME NUM USERNAME...
+
+
+
+Note : Un client qui vient de se connecter recoit LST  et ARV (La liste contenant les clients déjà connectés et ARV contenant lui même)
+
+    S -> A
+
+    ARV NUM USERNAME
+
+
+S -> A
+
+    LFT NUM
+
+
+Pas obligatoire
+C -> S
+
+    QUT
+
+
+//Debut Pas Obligatoire !!
+
+C -> S
+
+    MSG (un message textuelle)
+
+
+S -> A
+
+    MSG NUM (Un message textuelle)
+
+
+
+Note : l'hote est la personne qui gère le serveur, normalement elle est défini par le fait qu'il sagit de la première personne connectée, donc le numéro 0.
+
+################### MAP SELECTION #########################
+
+Ces commandes permettent de changer la map du serveur sans avoir à connaitre les map à l'avance
+Commande pour changer la map active du serveur, par defaut à 0.
+Hote -> S
+
+    NXT
+
+    PRV
+
+
+Le serveur renvoie la map active en cas de changement de map (à tout le monde, pour qu'ils puissent suivre ce qu'il se passe)
+
+S -> C ("un mec qui se co")
+S -> A (Lors d'un changement)
+
+    ACT Num "Nom de la map"
+
+
+################### CONFIG ########################
+
+S -> C ("un mec qui se co")
+S -> A (Lors d'un changement)
+
+    CFG BOMB POWER SPEED BMB-DUR VIE %ALL BMB POW SPD
+
+
+Commande pour choisir les option de partie :
+    SET BOMB POWER SPEED DuréeBombe VIE
+
+BOMB = Numbre de bombes en début de partie. Minimum 1.
+POWER = Puissance en début de partie. Minimum 1.
+SPEED = vitesse en debut de partie (un chiffre entre 0 et 9, 0 etant le plus lent, 9 le plus rapide)
+DuréeBombe = La durée des bombes avant d'exploser en millisecondes
+VIE = Nombre de coup subis permis avant de mourir. Minimum 1
+
+Commande concernant les chances
+
+    CHA %All Bmb Pow Spd
+
+
+%All = %de chance qu'un bonus aparraisse, valeur entre 0 et 100
+
+La somme des 3 dernier parametre vaut le total
+
+Bmb = chance qu'un bonus de bombe apparaisse sur total
+Pow = chance qu'un bonus d'explosion apparaisse sur total
+Spd = chance qu'un bonus de speed apparaisse sur total
+
+exemple : CHA 60 5 5 10
+il y a 6 chance sur 10 qu'un bonus spawn
+5 + 5 + 10 = 20
+donc si un bonus apparait il a 5 chance sur 20 d'etre un bonus de bombe, 5 sur 20 un bonus d'explosion et 10 sur 20 d'etre un bonus de speed.
+
+//Fin Pas Obligatoire !!
+
+Hote -> S
+
+    RDY
+
+
+#################### Debut de partie #######################
+
+Quand tout le monde est connecté le serveur envoie aux clients la map et la position de chaque joueur. Chaque client prévient quand il est prêt puis le server envoie un signal de départ.
+
+S -> A
+
+    MAP HEIGHT WIDTH DATA
+
+    0 VIDE
+
+    1 DESTRUCTIBLE
+
+    2 INDEST
+
+
+Envoie à tout le monde le nombre de joueur ainsi que leur numéro, leur pos sur la map et leur pseudo
+
+S -> A
+
+    ALL NUMBER NUM1 X Y NUM2 X Y NUM3 X Y...
+
+
+S -> A
+
+    STR SLEEP
+
+
+################## Pendant la partie ########################
+
+Le client envoie les inputs clavier, déplacement et bombes. Le serveur vérifie que les actions sont possible et renvoie les positions des joueurs et des bombe dans ce cas.
+C'est le serveur qui annonce l'explosion des bombes.
+ 
+C -> S
+
+    MOV L  //Gauche
+
+    MOV R //Droite
+
+    MOV B //Bas
+
+    MOV T  //Haut
+
+
+S -> A
+
+    POS NUM X Y
+
+
+C -> S
+
+    BMB
+
+
+S -> A
+
+    BMB X Y POW
+
+
+S -> A
+
+    EXP X Y POW
+
+
+( Durée d'explosion: 600 ms)
+
+
+Informe les clients des bloques cassé par les bombes qui ont explosé
+S -> A
+
+    BRK X1 Y1 X2 Y2....
+
+
+Le serveur décide des bonus qui apparaissent sur la map suite à l'explosion de certains bloc, il envoie leur position et type, si un joueur passe sur un bonus, le serveur l'annonce aux autres.
+
+S -> A
+
+    BNS X Y TYPE
+
+    0 NB BMB
+
+    1 POW
+
+    2 SPEED
+
+    
+S -> A
+
+    GOT X Y
+
+
+Le serveur annonce les morts, voire la fin de la partie.
+S -> A
+
+    DTH NUM NUM
+
+     Numéro du joueur tué ainsi que du tueur   
+        
+S -> A
+
+    END NUM
+
+    (Egalité -1)
+
+
+#################### Ended  ########################
+
+
+L'hote envoie au serveur qu'il veut recommencer
+H -> S
+
+    RST
+
+
+Puis le serveur l'envoie à tout le monde
+S -> A
+
+    RST
