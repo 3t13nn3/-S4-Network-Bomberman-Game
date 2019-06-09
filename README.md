@@ -80,4 +80,7 @@ Here is some picture that illustrate execution:
 ## Author
 
 * **Etienne PENAULT** - *Programmation Impérative II* - Paris VIII
-* **Alix HOUEL** - EPSAA
+
+## Acknowledgments
+
+* **Alix HOUEL** - *Graphics* - EPSAA
