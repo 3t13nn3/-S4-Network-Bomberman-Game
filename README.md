@@ -52,6 +52,8 @@ Furthermore, you could break some walls to go find adversarys.
 
 We can notice that if a bomb which did not explose is in the field of an explosion, the bomb who is not explosed will explose.
 
+Same with bonus, if a bonus is in an explosion, he will disappear.
+
 At least, there are some bonus:
 - ***Speed*** bonus which makes you gain speed ![Speed]()
 - ***Pow*** bonus which makes you gain a unit on your explosion extend ![Pow]()
