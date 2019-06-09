@@ -108,4 +108,4 @@ Here is some picture that illustrate execution:
 
 ## Acknowledgments
 
-* **Alix HOUEL** - *Graphics* - EPSAA
+* **[Alix HOUEL](https://houelalix.wixsite.com/portfolio)** - *Graphics* - EPSAA
