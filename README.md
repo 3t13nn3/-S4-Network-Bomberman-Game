@@ -96,7 +96,7 @@ Here is some picture that illustrate execution:
 
 ## Author
 
-* **Etienne PENAULT** - *Programmation Impérative II* - Paris VIII
+* **Etienne PENAULT** - *Réseaux: modèles, protocoles, programmation* - Paris VIII
 
 ## Acknowledgments
 
