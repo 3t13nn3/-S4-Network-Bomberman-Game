@@ -55,9 +55,9 @@ We can notice that if a bomb which did not explose is in the field of an explosi
 Same with bonus, if a bonus is in an explosion, he will disappear.
 
 At least, there are some bonus:
-- ![***Speed***](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/speed.bmp) bonus which makes you gain speed
-- ***Pow*** bonus which makes you gain a unit on your explosion extend ![Pow]()
-- ***Bomb*** bonus which enlarge your bomb reserve of 1 ![Bomb]()
+- ***Speed*** ![Speed](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/speed.bmp) bonus which makes you gain speed
+- ***Pow*** ![Pow](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/pow.bmp) bonus which makes you gain a unit on your explosion extend
+- ***Bomb*** ![Bomb](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/bomb.bmp) bonus which enlarge your bomb reserve of 1 
 
 ### Gameplay
 
