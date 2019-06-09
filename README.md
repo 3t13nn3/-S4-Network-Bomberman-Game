@@ -1,9 +1,11 @@
 # -S4-Network-Bomberman-Game
 A Bomberman network game made in Golang and [SDL2 library binding for Golang by veandco](https://github.com/veandco/go-sdl2) for university course about Networking. Contains client &amp; servor.
 
-This project aims to learn a new langage & use the network over a game [Client](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/client.go) & a [Servor](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/servor.go) following a [protocol](Prtocole a rajouter).
+This project aims to learn a new langage & use the network over a game [Client](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/client.go) & a [Servor](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/servor.go) following a [protocol](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Protocol/protocol.txt).
 
-If you are a french speaker, I invite you to check the [Report of this project](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Rapport/Rapport.pdf) for more details, else check the code comments & the [protocol](Prtocole a rajouter) use.
+If you are a french speaker, I invite you to check the [Report of this project](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Rapport/Rapport.pdf) & the [protocol](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Protocol/protocol.txt) I used for more details.
+
+If you are not a french speaker, you can check the code comments.
 
 ## Prerequisites
 
