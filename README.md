@@ -78,27 +78,27 @@ Clean object files and binary by ```make clean```.
 
 Here is some picture that illustrate execution:
 
-### Menu
+- ***Menu***
 
 ![Menu](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/1.png)
 
-### Asking Nickname
+- ***Asking Nickname***
 
 ![Asking Nickname](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/2.png)
 
-### Lobby
+- ***Lobby***
 
 ![Lobby](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/3.png)
 
-### Countdown
+- ***Countdown***
 
 ![Countdown](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/4.png)
 
-### In Game
+- ***In Game***
 
 ![In Game](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/5.png)
 
-### Explosion
+- ***Explosion***
 
 ![Explosion](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Screen/6.png)
 
