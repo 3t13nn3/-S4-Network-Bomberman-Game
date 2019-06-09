@@ -5,7 +5,7 @@ This project aims to learn a new langage & use the network over a game [Client](
 
 If you are a french speaker, I invite you to check the [Report of this project](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Rapport/Rapport.pdf) & the [protocol](https://github.com/3t13nn3/-S4-Network-Bomberman-Game/blob/master/Protocol/protocol.txt) I used for more details.
 
-If you are not a french speaker, you can check the code comments.
+If you are not a french speaker, you can still check the code comments.
 
 ## Prerequisites
 
