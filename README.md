@@ -7,6 +7,8 @@ If you are a french speaker, I invite you to check the [Report of this project](
 
 If you are not a french speaker, you can still check the code comments.
 
+Note: You can find an other implementation of this game in C++ by a classmate [here](https://github.com/TheMagnat/Bomberman-Reseau-C-SFML).
+
 ## Prerequisites
 
 - [SDL2 library binding for Golang by veandco](https://github.com/veandco/go-sdl2) 
